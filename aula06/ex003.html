@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+</head>
+<style>
+    body{
+        background-color: blueviolet;
+        color: yellow;
+        font: normal 20px tahoma;
+    }
+</style>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        /* 
+        var n1 = window.prompt('Digite um número: ')
+        var n2 = window.prompt('Digite outro número: ')
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + s)
+        resultado dará uma concatenação
+        */ 
+
+        // jeito correto
+
+        /*
+        var n1 = Number.parseInt(window.prompt('Digite um número: '))
+        var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert('A soma dos Valores é ' + s)
+        Resultado com numero Inteiro
+        */
+
+        /*
+        var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert('A soma dos Valores é ' + s)
+        */
+
+        // Resultado para numero com (,)
+
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma dos Valores é ${s} `) //template string
+
+        // o JS irá se virar para diferenciar numero real de nimero inteiro
+
+         /*
+            Converter para string 2 formas:
+            string(n)
+            n.toString()
+
+        var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        
+        ou window.alert('A soma dos Valores é ' + String(s))
+        ou window.alert('A soma dos Valores é ' + s.toString())
+        */
+    </script>
+</body>
+</html>
