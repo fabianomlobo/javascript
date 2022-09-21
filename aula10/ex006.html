@@ -16,6 +16,7 @@
             border-radius: 25px;
             margin: auto;
             border: 3px solid black;
+            
         }
     </style>
 </head>
@@ -28,20 +29,21 @@
     <!-- 
         <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
         Interaja...
-    </div>  formque polui o html
+    </div>  forma que polui o html 
     -->
     <script>
         var a = window.document.getElementById('area')
         a.addEventListener('click', clicar)
         a.addEventListener('mouseenter', entrar)
         a.addEventListener('mouseout', sair)
+        a.addEventListener('mousedown', segurarClique)
 
 
 
         // o evento 'clicar' foi chamado da tag div
         function clicar(){
-            //var a = window.document.getElementById('area') |  selicionado a var area por este objeto e com a variavel aqui so conseguimos usala dentro desta function etao vamos jogala pra cima
-            a.innerText = 'Clicou!' // irá mudar o conteúdo do elemento selecionado
+            //var a = window.document.getElementById('area') |  selecionado a var area por este objeto e com a variavel aqui so conseguimos usa-la dentro desta function entao vamos joga-la pra cima
+            a.innerText = 'Soltou!' // irá mudar o conteúdo do elemento selecionado
             a.style.background = 'red' // mudará a cor de fundo para verde           
 
         }
@@ -55,6 +57,11 @@
         function sair(){
             a.innerText = 'Saiu!'
             a.style.background = 'blue'
+        }
+
+        function segurarClique(){
+            a.innerText = 'Segurou!'
+            a.style.background = 'brown'
         }
     </script>
 </body>
